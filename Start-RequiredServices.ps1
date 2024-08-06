@@ -31,7 +31,7 @@ function Start-Services()
             {
                 $service_started = $true;
                 Write-Host "$($service.DisplayName) successfully started!"
-                continue
+                break
             }
         }
 
@@ -43,4 +43,4 @@ function Start-Services()
 }
 
 
-Start-Services -DisplayName "*Warteschlange*" -Retries 5
+Start-Services -DisplayName "*Spool*" -Retries 5
